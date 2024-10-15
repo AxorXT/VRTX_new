@@ -1369,7 +1369,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: a6ccbb4a162a3f649a95125e7c79cea6, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: -2505642851634945670, guid: 742f8b193c639c943b15ce041106f8fb, type: 3}
+      objectReference: {fileID: -382652638819485698, guid: 39326dc967e4ecd4ebf4c05db3950203, type: 3}
     - target: {fileID: 919132149155446097, guid: a6ccbb4a162a3f649a95125e7c79cea6, type: 3}
       propertyPath: m_Name
       value: button_teamBlue
@@ -1752,6 +1752,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d30bc0257f1054c4498b05cf5d544ca8, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: -2653651044934150266, guid: 193a78a755d7ab042ba8616396974317, type: 3}
     - target: {fileID: 919132149155446097, guid: d30bc0257f1054c4498b05cf5d544ca8, type: 3}
       propertyPath: m_Name
       value: tileLarge_teamRed
@@ -4648,7 +4652,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -2505642851634945670, guid: 742f8b193c639c943b15ce041106f8fb, type: 3}
+  - {fileID: 2926557707537190794, guid: a6ccbb4a162a3f649a95125e7c79cea6, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
