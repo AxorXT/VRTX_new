@@ -6,13 +6,13 @@ using TMPro;
 public class PlayerMovementTutorial : MonoBehaviour
 {
     [Header("Movement")]
-    public float moveSpeed;
+    public float moveSpeed = 5f;
+    public float sprintMultiplier = 1.5f; // Multiplicador de velocidad de sprint
+    public float groundDrag = 6f;
 
-    public float groundDrag;
-
-    public float jumpForce;
+    public float jumpForce = 5f;
     public float jumpCooldown;
-    public float airMultiplier;
+    public float airMultiplier = 0.4f;
     bool readyToJump;
 
     [HideInInspector] public float walkSpeed;
@@ -20,6 +20,7 @@ public class PlayerMovementTutorial : MonoBehaviour
 
     [Header("Keybinds")]
     public KeyCode jumpKey = KeyCode.Space;
+    public KeyCode sprintKey = KeyCode.LeftShift; // Tecla para activar el sprint
 
     [Header("Ground Check")]
     public float playerHeight;
@@ -41,6 +42,9 @@ public class PlayerMovementTutorial : MonoBehaviour
         rb.freezeRotation = true;
 
         readyToJump = true;
+
+        walkSpeed = moveSpeed;
+        sprintSpeed = moveSpeed * sprintMultiplier;
     }
 
     private void Update()
@@ -77,6 +81,12 @@ public class PlayerMovementTutorial : MonoBehaviour
 
             Invoke(nameof(ResetJump), jumpCooldown);
         }
+
+        // Cambiar la velocidad si se está presionando la tecla de sprint
+        if (Input.GetKey(sprintKey) && grounded)
+            moveSpeed = sprintSpeed;
+        else
+            moveSpeed = walkSpeed;
     }
 
     private void MovePlayer()
